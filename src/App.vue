@@ -4,9 +4,29 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <LoadIcon v-if="isLoading" />
     <router-view />
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+import { mapState } from "vuex";
+import { State } from "./store";
+import LoadIcon from "./components/LoadIcon.vue";
+
+export default Vue.extend({
+  name: "App",
+  components: {
+    LoadIcon
+  },
+  computed: {
+    ...mapState<State>({
+      isLoading: (state: State) => state.isLoading
+    })
+  }
+});
+</script>
 
 <style>
 #app {
