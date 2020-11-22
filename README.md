@@ -1,4 +1,4 @@
-# mmai-ui
+# acm-game-ui
 
 ## Project setup
 ```
