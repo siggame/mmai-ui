@@ -2,6 +2,8 @@
 ```
 Please do not push to master, make a pull request! If you need any help
 @Nick Latinette/Web or just ask for help in the general chat
+
+git checkout -b [branch name]
 ```
 ## Project setup
 ```
