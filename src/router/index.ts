@@ -9,8 +9,6 @@ import store from "../store";
 const Home = () => import(/* webpackChunkName: "home" */ "../views/Home.vue");
 const About = () =>
   import(/* webpackChunkName: "about" */ "../views/About.vue");
-const Sponsors = () =>
-  import(/* webpackChunkName: "sponsors" */ "../views/Sponsors.vue");
 const Error = () =>
   import(/* webpackChunkName: "error" */ "../views/Error.vue");
 
@@ -29,12 +27,6 @@ const routes: Array<RouteConfig> = [
     name: "About",
     component: About
   },
-  {
-    path: "/sponsors",
-    name: "Sponsors",
-    component: Sponsors
-  },
-
   {
     path: "/error",
     name: "Error",
