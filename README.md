@@ -1,5 +1,7 @@
 # acm-game-ui
-
+```
+Please do not push to master, make a pull request! If you need any help, @Nick Latinette/Web or just ask for help in the general
+```
 ## Project setup
 ```
 npm install
