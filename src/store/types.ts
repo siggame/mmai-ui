@@ -1,5 +1,5 @@
 // Create an interface for UserInfo
-interface UserInfo {
+export interface UserInfo {
   username: string;
   email: string;
 }

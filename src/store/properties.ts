@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 
 import { MutationTree, ActionTree, ModuleTree } from 'vuex';
-import { State } from './types';
+import { State, UserInfo } from './types';
 
 // State is essentially a set of variables
 export const state: State = {
