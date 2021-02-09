@@ -1,7 +1,11 @@
+# Directory metadata
 .DS_Store
-node_modules
-/dist
 
+# Installed dependencies
+node_modules
+
+# Compiled code
+/dist
 
 # local env files
 .env.local

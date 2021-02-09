@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/recommended",
+    "@vue/airbnb",
+    "@vue/typescript/recommended"
+  ],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-dynamic-require": "off",
+    "global-require": "off",
+    "max-classes-per-file": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-plusplus": "off",
+    "prefer-destructuring": "off",
+    "import/no-unresolved": "off"
+  },
+  "ignorePatterns": [
+    "dist"
+  ]
+}
