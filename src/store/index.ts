@@ -1,5 +1,7 @@
-import Vue from "vue";
-import Vuex, { MutationTree, ActionTree, ModuleTree } from "vuex";
+/* eslint-disable no-param-reassign */
+
+import Vue from 'vue';
+import Vuex, { MutationTree, ActionTree, ModuleTree } from 'vuex';
 
 Vue.use(Vuex);
 
@@ -24,30 +26,30 @@ const state: State = {
   userFound: false,
   userInfo: {},
   error: false,
-  errorMessage: ""
+  errorMessage: '',
 };
 
 // Mutations are methods used to manipulate state
 const mutations: MutationTree<State> = {
-  updateLoading(state: State, payload: boolean) {
-    state.isLoading = payload;
+  updateLoading(theState: State, payload: boolean) {
+    theState.isLoading = payload;
   },
-  updateUser(state: State, payload: UserInfo) {
-    state.userFound = true;
-    state.userInfo = payload;
+  updateUser(theState: State, payload: UserInfo) {
+    theState.userFound = true;
+    theState.userInfo = payload;
   },
-  clearUser(state: State) {
-    state.userFound = false;
-    state.userInfo = {};
+  clearUser(theState: State) {
+    theState.userFound = false;
+    theState.userInfo = {};
   },
-  updateError(state: State, payload: string) {
-    state.error = true;
-    state.errorMessage = payload;
+  updateError(theState: State, payload: string) {
+    theState.error = true;
+    theState.errorMessage = payload;
   },
-  clearError(state: State) {
-    state.error = false;
-    state.errorMessage = "";
-  }
+  clearError(theState: State) {
+    theState.error = false;
+    theState.errorMessage = '';
+  },
 };
 
 // Actions are miscellaneous methods that can be async
@@ -55,14 +57,14 @@ const actions: ActionTree<State, State> = {
   async verifyUser(store) {
     try {
       // TODO - real use verification
-      store.commit("updateUser", { username: "FakeUser" });
+      store.commit('updateUser', { username: 'FakeUser' });
     } catch (err) {
       store.commit(
-        "updateError",
-        `Failed to retrieve user info for the current user. ${err}`
+        'updateError',
+        `Failed to retrieve user info for the current user. ${err}`,
       );
     }
-  }
+  },
 };
 
 // Modules allow us to break up our store if it gets too bloated
@@ -73,5 +75,5 @@ export default new Vuex.Store({
   state,
   mutations,
   actions,
-  modules
+  modules,
 });

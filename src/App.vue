@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">
+        Home
+      </router-link> |
+      <router-link to="/about">
+        About
+      </router-link>
     </div>
     <LoadIcon v-if="isLoading" />
     <router-view />
@@ -10,21 +14,21 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { mapState } from "vuex";
-import { State } from "./store";
-import LoadIcon from "./components/LoadIcon.vue";
+import Vue from 'vue';
+import { mapState } from 'vuex';
+import { State } from './store';
+import LoadIcon from './components/LoadIcon.vue';
 
 export default Vue.extend({
-  name: "App",
+  name: 'App',
   components: {
-    LoadIcon
+    LoadIcon,
   },
   computed: {
     ...mapState<State>({
-      isLoading: (state: State) => state.isLoading
-    })
-  }
+      isLoading: (state: State) => state.isLoading,
+    }),
+  },
 });
 </script>
 
