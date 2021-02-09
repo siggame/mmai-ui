@@ -16,7 +16,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { mapState } from 'vuex';
-import { State } from './store';
+import { State } from './store/types';
 import LoadIcon from './components/LoadIcon.vue';
 
 export default Vue.extend({

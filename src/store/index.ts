@@ -1,74 +1,10 @@
-/* eslint-disable no-param-reassign */
-
 import Vue from 'vue';
-import Vuex, { MutationTree, ActionTree, ModuleTree } from 'vuex';
+import Vuex from 'vuex';
+import {
+  state, mutations, actions, modules,
+} from './properties';
 
 Vue.use(Vuex);
-
-// Create an interface for UserInfo
-interface UserInfo {
-  username: string;
-  email: string;
-}
-
-// Create a State interface for TypeScript type-checking
-export interface State {
-  isLoading: boolean;
-  userFound: boolean;
-  userInfo: UserInfo | {};
-  error: boolean;
-  errorMessage: string;
-}
-
-// State is essentially a set of variables
-const state: State = {
-  isLoading: false,
-  userFound: false,
-  userInfo: {},
-  error: false,
-  errorMessage: '',
-};
-
-// Mutations are methods used to manipulate state
-const mutations: MutationTree<State> = {
-  updateLoading(theState: State, payload: boolean) {
-    theState.isLoading = payload;
-  },
-  updateUser(theState: State, payload: UserInfo) {
-    theState.userFound = true;
-    theState.userInfo = payload;
-  },
-  clearUser(theState: State) {
-    theState.userFound = false;
-    theState.userInfo = {};
-  },
-  updateError(theState: State, payload: string) {
-    theState.error = true;
-    theState.errorMessage = payload;
-  },
-  clearError(theState: State) {
-    theState.error = false;
-    theState.errorMessage = '';
-  },
-};
-
-// Actions are miscellaneous methods that can be async
-const actions: ActionTree<State, State> = {
-  async verifyUser(store) {
-    try {
-      // TODO - real use verification
-      store.commit('updateUser', { username: 'FakeUser' });
-    } catch (err) {
-      store.commit(
-        'updateError',
-        `Failed to retrieve user info for the current user. ${err}`,
-      );
-    }
-  },
-};
-
-// Modules allow us to break up our store if it gets too bloated
-const modules: ModuleTree<State> = {};
 
 // Define our global state store
 export default new Vuex.Store({
