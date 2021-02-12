@@ -1,3 +1,11 @@
-> 1%
+# If a browser satisfies one of the following conditions, it can fully use this application.
+# This means that modern code will be compiled down to a level usable by the browser.
+
+# This browser is used by over 0.2% of users globally
+> 0.2%
+
+# This browser is one of its two latest versions
 last 2 versions
+
+# This browser is still supported
 not dead

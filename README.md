@@ -1,10 +1,8 @@
 # acm-game-ui
-```
-Please do not push to master, make a pull request! If you need any help
-@Nick Latinette/Web or just ask for help in the general chat
 
-git checkout -b [branch name]
-```
+The ACM Game website source code.  
+Contact the Web team for more information.
+
 ## Project setup
 ```
 npm install
@@ -24,6 +22,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
