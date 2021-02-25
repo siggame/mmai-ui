@@ -8,6 +8,7 @@ import { beforeGuard, afterGuard } from './guards';
 // Code is sent to the browser in named webpack chunks (example: home.[hash].js)
 const Home = () => import(/* webpackChunkName: "home" */ '../views/Home.vue');
 const About = () => import(/* webpackChunkName: "about" */ '../views/About.vue');
+const Sponsor = () => import(/* webpackChunkName: "sponsor" */ '../views/Sponsor.vue');
 const Error = () => import(/* webpackChunkName: "error" */ '../views/Error.vue');
 
 // Apply a VueRouter to our Vue instance
@@ -24,6 +25,11 @@ const routes: Array<RouteConfig> = [
     path: '/about',
     name: 'About',
     component: About,
+  },
+  {
+    path: '/sponsor',
+    name: 'Sponsor',
+    component: Sponsor,
   },
   {
     path: '/error',
