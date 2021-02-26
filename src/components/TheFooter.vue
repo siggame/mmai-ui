@@ -1,6 +1,6 @@
 <template>
-  <div class="load-icon">
-    <p>Loading...</p>
+  <div id="the-footer">
+    <h2> John is mean </h2>
   </div>
 </template>
 
@@ -8,6 +8,10 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'LoadIcon',
+  name: 'TheFooter',
 });
 </script>
+
+<style scoped>
+
+</style>
