@@ -35,7 +35,7 @@ export default Vue.extend({
   },
   methods: {
     getLogoUrl() {
-      return require(`@/assets/${this.logo}`);
+      return require(`@/assets/sponsors/${this.logo}`);
     },
   },
 });
