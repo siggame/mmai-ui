@@ -1,5 +1,8 @@
 <template>
-  <div id="the-button">
+  <div
+    id="the-button"
+    @click="handleClick()"
+  >
     <p class="button-text">
       {{ text }}
     </p>
@@ -17,6 +20,11 @@ export default Vue.extend({
       default: '',
     },
   },
+  methods: {
+    handleClick() {
+      this.$emit('click');
+    },
+  },
 });
 </script>
 
@@ -26,6 +34,7 @@ export default Vue.extend({
   display: inline-block;
   width: 140px;
   height: 40px;
+  cursor: pointer;
 }
 
 .button-text {

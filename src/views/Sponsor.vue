@@ -13,10 +13,12 @@
     <TheButton
       text="Sponsor Packet"
       class="sponsor-button"
+      @click="downloadSponsorPacket()"
     />
     <TheButton
       text="Donate"
       class="sponsor-button"
+      @click="redirectDonate()"
     />
 
     <div class="sponsor-list">
@@ -51,6 +53,14 @@ export default Vue.extend({
         { name: 'Sabharwhal', logo: 'logo.png', info: 'WOOWOOWOWOWO' },
       ],
     };
+  },
+  methods: {
+    downloadSponsorPacket() {
+      alert('TODO: download');
+    },
+    redirectDonate() {
+      alert('DONATE');
+    },
   },
 });
 </script>
