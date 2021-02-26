@@ -1,6 +1,6 @@
-# acm-game-ui
+# mmai-ui
 
-The ACM Game website source code.  
+The MegaMinerAI website source code.
 Contact the Web team for more information.
 
 ## Project setup
