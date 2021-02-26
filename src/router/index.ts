@@ -7,6 +7,7 @@ import { beforeGuard, afterGuard } from './guards';
 // Reduces initial load time for the website by loading pages as-needed
 // Code is sent to the browser in named webpack chunks (example: home.[hash].js)
 const Home = () => import(/* webpackChunkName: "home" */ '../views/Home.vue');
+const Login = () => import(/* webpackChunkName: "login" */ '../views/Login.vue');
 const About = () => import(/* webpackChunkName: "about" */ '../views/About.vue');
 const Error = () => import(/* webpackChunkName: "error" */ '../views/Error.vue');
 
@@ -19,6 +20,11 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
   },
   {
     path: '/about',

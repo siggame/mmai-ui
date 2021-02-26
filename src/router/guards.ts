@@ -20,6 +20,11 @@ export async function beforeGuard(to: Route, _from: Route, next: Function) {
   // Set page as currently loading
   store.commit('updateLoading', true);
 
+  // Ensure the user is logged in
+  if (!store.state.userFound && to.name !== 'Login') {
+    return next({ name: 'Login' });
+  }
+
   // Check if the user has permission to view their intended route
   const hasPermission = await userHasPermission(to);
 
@@ -28,10 +33,10 @@ export async function beforeGuard(to: Route, _from: Route, next: Function) {
       'updateError',
       'You do not have permission to view this page!',
     );
-    next({ name: 'Error' });
-  } else {
-    next();
+    return next({ name: 'Error' });
   }
+
+  return next();
 }
 
 // Function called after each route load
