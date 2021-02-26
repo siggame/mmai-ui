@@ -21,24 +21,11 @@
 
     <div class="sponsor-list">
       <SponsorBlock
-        logo="garmin.jpg"
-        name="Garmin"
-        info="We are awesome!"
-      />
-      <SponsorBlock
-        logo="logo.png"
-        name="Farmin"
-        info="This company rocks!"
-      />
-      <SponsorBlock
-        logo="logo.png"
-        name="Charmin"
-        info="Woah!!!!!"
-      />
-      <SponsorBlock
-        logo="logo.png"
-        name="Sabharwhal"
-        info="WOOWOOWOWOWO"
+        v-for="(sponsor, index) of sponsors"
+        :key="index"
+        :name="sponsor.name"
+        :logo="sponsor.logo"
+        :info="sponsor.info"
       />
     </div>
   </div>
@@ -54,6 +41,16 @@ export default Vue.extend({
   components: {
     SponsorBlock,
     TheButton,
+  },
+  data() {
+    return {
+      sponsors: [
+        { name: 'Garmin', logo: 'garmin.jpg', info: 'We are awesome!' },
+        { name: 'Farmin', logo: 'logo.png', info: 'This company rocks!' },
+        { name: 'Charmin', logo: 'logo.png', info: 'Woah!!!!!' },
+        { name: 'Sabharwhal', logo: 'logo.png', info: 'WOOWOOWOWOWO' },
+      ],
+    };
   },
 });
 </script>
