@@ -10,6 +10,7 @@ export const state: State = {
   userInfo: {},
   error: false,
   errorMessage: '',
+  mmaiApi: 'http://localhost:3000', // TODO: real route
 };
 
 // Mutations are methods used to manipulate state

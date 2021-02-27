@@ -11,4 +11,5 @@ export interface State {
   userInfo: UserInfo | {};
   error: boolean;
   errorMessage: string;
+  mmaiApi: string;
 }
