@@ -1,16 +1,26 @@
 <template>
   <div id="login-page">
-    <input
-      v-model="username"
-      type="text"
-    >
-    <input
-      v-model="password"
-      type="password"
-    >
-    <button @click="verifyUser()">
-      Submit
-    </button>
+    <div class="login-box">
+      <div class="logo-bubble">
+        <img
+          class="login-logo"
+          src="../assets/images/wrench.png"
+        >
+      </div>
+      <h1 class="login-header">
+        Log in to your MMAI account
+      </h1>
+      <div class="login-form">
+        <input
+          v-model="username"
+          type="text"
+        >
+        <input
+          v-model="password"
+          type="password"
+        >
+      </div>
+    </div>
   </div>
 </template>
 
@@ -41,5 +51,48 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+#login-page {
+  background-color: #000b22;
+  height: 100%;
+  padding: 100px;
+}
 
+.logo-bubble {
+  background-color: #002d93;
+  display: inline-block;
+  border-radius: 100%;
+  margin-top: -50px;
+  height: 100px;
+  width: 100px;
+}
+
+.login-logo {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+
+.login-box {
+  height: 500px;
+  width: 400px;
+  background-color: #002d93;
+  position: static;
+  margin: auto;
+}
+
+.login-header {
+  color: #52f3fe;
+  font-size: 24px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.login-form input {
+  height: 20px;
+  display: inline-block;
+}
 </style>

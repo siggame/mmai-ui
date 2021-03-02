@@ -1,16 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">
-        Home
-      </router-link> |
-      <router-link to="/about">
-        About
-      </router-link>
-    </div>
     <LoadIcon v-if="isLoading" />
     <router-view />
-    <TheFooter />
   </div>
 </template>
 
@@ -19,13 +10,11 @@ import Vue from 'vue';
 import { mapState } from 'vuex';
 import { State } from './store/types';
 import LoadIcon from './components/LoadIcon.vue';
-import TheFooter from './components/TheFooter.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
     LoadIcon,
-    TheFooter,
   },
   computed: {
     ...mapState<State>({
@@ -43,7 +32,7 @@ export default Vue.extend({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #002f49;
+  height: 100%;
 }
 
 #nav {
